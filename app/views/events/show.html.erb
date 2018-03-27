@@ -1,0 +1,27 @@
+<div class='container'>
+	<div class ='menubar'>		
+		<div class='pad_in3'><%= render '/game/menu' %></div><!-- Render menu -->		
+		<div class='pad_in3'><h2><%= t '.apptitle' %></h2></div><!-- App title -->		
+		<div class='pad_in3'><%= render '/game/quit' %></div> <!-- close the App -->
+	</div>
+
+	<div class='gamecard'>
+		<div background-color="var(--color)">
+			<div capitalize><h1><%= @event.color %></h1></div>
+		</div>
+
+		<h2><%= @event.title %></h2>
+		<p><%= @event.message %></p>		
+		<h2><%= @amounttext %></h2>
+		<div class='actions'>
+			<%= button_to 'OK', {
+				:controller => 'userlogs', 
+				:action => 'create', 
+				:event_id => params[:id], 
+				:userstat_id => params[:userstat_id]
+			}, :method=>:post, 
+			:class => 'button' %>
+			<!-- <= button_to 'OK', create_userlog_path, :id, :userstat_id, :class => 'button' %> -->
+		</div>		
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<div class='container'>
+	<div class ='menubar'>		
+		<div class='pad_in3'><%= render '/game/menu' %></div><!-- Render menu -->		
+		<div class='pad_in3'><h2><%= t '.apptitle' %></h2></div><!-- App title -->		
+		<div class='pad_in3'><%= render '/game/quit' %></div> <!-- close the App -->
+	</div>
+	<div class='toppad'>
+		<div class='pad_in2'>
+		    <div class='label'><%= t '.available' %></div>
+		    <div class='field num'><%= @userstat.available %></div>
+		</div>		    
+		<div class='pad_in2'>
+			<div class='actions'><%= button_to t('.bankAcc'), root_path, :class => 'button' %></div>
+			<div class='actions'><%= button_to t('.stocks'), root_path, :class => 'button' %></div>
+		</div>	
+	</div>
+	<div class='midpad'>		
+		<%= render '/game/wheel' %>  <!-- Picture of hamster in a wheel + Render a new _event page -->
+	</div>
+	<div class='grid'>
+		<div class="pad_in2">
+			<div class='actions'><%= button_to t('.revenue'), root_path, :class => 'button' %></div>
+			<div class='actions'><%= button_to t('.expense'), root_path, :class => 'button' %></div>
+		</div>
+		<div class="pad_in2">				
+			<div class='actions'><%= button_to t('.assets'), root_path, :class => 'button' %></div>
+			<div class='actions'><%= button_to t('.liabilities'), root_path, :class => 'button' %></div>
+		</div>
+	</div>
+	<div class='grid'>
+		<div class="pad_in2">
+			<div class='label'><%= t '.revenueM' %></div>
+			<div class='field num'><%= @userstat.revenue %></div>
+		</div>
+		<div class="pad_in2">
+			<div class='actions'><%= button_to t('.wealth'), root_path, :class => 'button' %></div>
+			<div class='field num'><%= @userstat.wealth %></div>
+		</div>  
+	</div>
+</div>

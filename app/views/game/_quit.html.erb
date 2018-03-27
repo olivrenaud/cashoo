@@ -1,0 +1,49 @@
+<div class='menu_window'>
+	
+	<div><button onclick="$dialog_q.showModal()" class='icon icons8-Fermer-la-fenêtre'></button></div>
+
+	<dialog id="dialog_q" close> 
+		<p> Quit the application ? </p> 
+		<div class="actions">
+			<button onclick="$dialog_q.returnValue = document.getElementById('closeMsg').value">OK</button>
+			&nbsp;
+			<button onclick="$dialog_q.close()">Cancel</button>		
+		</div> 
+	</dialog>
+
+	<script> 
+	    var $dialog_q = document.getElementById('dialog_q'); 
+	</script>
+
+</div>	
+
+	<!-- <h1>Fenêtre modale HTML5</h1> -->
+<!-- 	<p id="promptCompat">Votre navigateur ne pend pas en charge les balises <code><dialog></code></p> 
+	<dialog id="mydialog" open> 
+		<p>Fenêtre modale avec type de balises HTML.</p> 
+		<div class="field">Remplir ce champ pour modifier le message de fermeture 
+			<input id="closeMsg" placeholder="Y compris des éléments de formulaire" />
+		</div> 
+		<div class="actions">
+			<button onclick="$dialog.close()">Fermer</button>&nbsp;
+			<button onclick="$dialog.returnValue = document.getElementById('closeMsg').value">Définir un message</button>
+		</div> 
+	</dialog>
+
+	<div class="actions">
+		<button onclick="$dialog.show()">Ouvrir en mode normal</button>&nbsp;
+		<button onclick="$dialog.showModal()">Ouvrir en mode modal</button>
+	</div> 
+	<div class="actions">	
+			<button onclick="alert($dialog.open)">Vérifier l'attribut <code>open</code></button>
+	</div> 
+	
+	<script> 
+	    var $dialog = document.getElementById('mydialog'); 
+	    if(!('show' in $dialog)){ 
+	            document.getElementById('promptCompat').className = 'no_dialog'; 
+	    } 
+	    $dialog.addEventListener('close', function() { 
+	            console.log('Fermeture. ', this.returnValue); 
+	    }); 
+	</script> -->

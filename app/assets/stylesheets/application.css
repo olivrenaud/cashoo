@@ -1,0 +1,244 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+	--color: lightgrey;
+}
+
+
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	font-family: "Helvetica Neue",Arial;
+	text-align: center;
+}
+
+h2 {
+	font-family: "Helvetica Neue",Arial;
+	text-align: center;
+}
+
+p {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;
+	text-align: center;
+	font-size: 20px;
+}
+
+button {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;
+	font-size: 20px;
+	background-color: lightgreen; 
+	border: 2px solid black;
+	border-radius: 7px;
+}
+
+/* Modal background */
+.modal, .menumodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 160px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/*.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 28%;
+}*/
+
+/* The Close Button */
+.close, .menuclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .menuclose:hover,
+.close:focus, .menuclose:focus, {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.label {
+	display: inline-block;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;	
+	font-size: 20px;
+	padding: 7px;
+	margin: 4px 5px 4px 5px;
+}
+
+.field {
+	display: inline-block;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;
+	font-size: 20px;
+	border: 1px solid lightgrey;
+	padding: 7px;
+	margin: 4px 5px 4px 5px;
+}
+
+.num {
+	text-align: justify;
+	padding: 5px 15px;
+}
+
+.actions {
+	display: inline-block;
+	margin: 4px 9px;
+}
+
+.startbutton {
+	width: 250;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;
+	font-size: 20px;
+	background-color: white; 
+	padding: 5px 7px;
+	border: 2px solid black;
+	border-radius: 7px;
+}
+
+.button {
+	display: inline-block;
+	cursor:pointer;
+	width: 180px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;
+	font-size: 20px;
+	background-color: white; 
+	border: 2px solid black;
+	border-radius: 7px;
+	padding: 5px 7px;
+}
+/*.button:active {
+ 	border: 3px solid green;	
+}*/
+
+.icon {	
+	cursor:pointer;
+	width: 50px;
+	height: 50px;
+	background-color: white;    
+    border:none;
+}
+.icons8-Menu-principal {	
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADEUlEQVRoQ+2a/ZUNQRDF70ZgRYAIlggQASKwIkAEiAARsBEgAkSwZEAEiIDzO6funDFev+mZ/th31vQ/+3pm+uPWvV1dXb1HuiTlqAOO6zHGt5ZjtQQCgJeS7geA95KeSmoCqAWQY0mPJT2RxO/XAYRnPyW9kvSiNju1gWB9WICNz5JORwzw7K2k2/EMdmCpSqkFhEm+kXRH0vdgIzVJwMLKNUmfJD2qIbdSIJbR8zArkmGSSGhfoR3SexYf0R4JzrVL9lkC5KEkJgAbH2JiSxcybQF+r1Rua4DcjHVgGbEOkEhJoS/Wj+XG+vmypMMlQJADUkASv8KSltSSMfd9S3/0f2Xk3bLklgsEGSEBwKyVUS7YsdwAAbCzucZzQKAcFvj7NTotldHcnPyeMTHeSUh3r9xSQLA8+wH6R0ZQTqcXUWCE8ZEb6whA/8htFxB2YBoCBkrpKEunDVEyFwyJxJmL3fUw5BQIHyCl3jLKtcFYbuxZg7OZAkH/oMfFHnLBNf+WdMuT3AWEdyA/5ILBidmG+W9ALpiujRETwN7SyxGwoNkzdpViRtxBD2VxMEs5nWIgPQDkjLEBybFSz282RmxtEgeE1T0K8V4qgVHMCJEn4XSPwvGBuK+J++0ZULKPpI4PxYz0YCJnjA1IjpV6flPMCBkOck89CqnXVMKvGMiPPZ6kNjgW+tVWXosgrtfpEaunUk/FjNS2+tr+NiBrLdeq3f/JiLONZBoppCtxh06KvYvrNadSz+Nu0IEedY6qWA+3zffcThF6uP4g+sSBcIy+G2EJwSkZT+oUUrdkGV1fxIg9hr3UtE6CbHwcpT7O/o3r9PExJkI/07oznEyU9647XTWtLwJiy/p6mcb4dtdhh2dYi+KcrBkCCAzAJAkLGPJEXSdTCEP0wR3kjWDIiWtHv743cX0RECZHQ0eg49/Td9SRy3gnnvu+5H0WEEKQQ8jApzyeM/OEMMPmPE2Z8gJJ9To8rXXPHLqQ+LDz77ofQSL+/5G1A7Vuh4T/Cijnrt5aT6ha/xuQaqas1NGlYeQPQZDXMwBE9z8AAAAASUVORK5CYII=") no-repeat;
+}
+.icons8-Menu-principal:active {
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADEUlEQVRoQ+2a/ZUNQRDF70ZgRYAIlggQASKwIkAEiAARsBEgAkSwZEAEiIDzO6funDFev+mZ/th31vQ/+3pm+uPWvV1dXb1HuiTlqAOO6zHGt5ZjtQQCgJeS7geA95KeSmoCqAWQY0mPJT2RxO/XAYRnPyW9kvSiNju1gWB9WICNz5JORwzw7K2k2/EMdmCpSqkFhEm+kXRH0vdgIzVJwMLKNUmfJD2qIbdSIJbR8zArkmGSSGhfoR3SexYf0R4JzrVL9lkC5KEkJgAbH2JiSxcybQF+r1Rua4DcjHVgGbEOkEhJoS/Wj+XG+vmypMMlQJADUkASv8KSltSSMfd9S3/0f2Xk3bLklgsEGSEBwKyVUS7YsdwAAbCzucZzQKAcFvj7NTotldHcnPyeMTHeSUh3r9xSQLA8+wH6R0ZQTqcXUWCE8ZEb6whA/8htFxB2YBoCBkrpKEunDVEyFwyJxJmL3fUw5BQIHyCl3jLKtcFYbuxZg7OZAkH/oMfFHnLBNf+WdMuT3AWEdyA/5ILBidmG+W9ALpiujRETwN7SyxGwoNkzdpViRtxBD2VxMEs5nWIgPQDkjLEBybFSz282RmxtEgeE1T0K8V4qgVHMCJEn4XSPwvGBuK+J++0ZULKPpI4PxYz0YCJnjA1IjpV6flPMCBkOck89CqnXVMKvGMiPPZ6kNjgW+tVWXosgrtfpEaunUk/FjNS2+tr+NiBrLdeq3f/JiLONZBoppCtxh06KvYvrNadSz+Nu0IEedY6qWA+3zffcThF6uP4g+sSBcIy+G2EJwSkZT+oUUrdkGV1fxIg9hr3UtE6CbHwcpT7O/o3r9PExJkI/07oznEyU9647XTWtLwJiy/p6mcb4dtdhh2dYi+KcrBkCCAzAJAkLGPJEXSdTCEP0wR3kjWDIiWtHv743cX0RECZHQ0eg49/Td9SRy3gnnvu+5H0WEEKQQ8jApzyeM/OEMMPmPE2Z8gJJ9To8rXXPHLqQ+LDz77ofQSL+/5G1A7Vuh4T/Cijnrt5aT6ha/xuQaqas1NGlYeQPQZDXMwBE9z8AAAAASUVORK5CYII=") no-repeat;
+ 	border: 5px solid green;
+}
+.icons8-Fermer-la-fenêtre {	
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAB9klEQVRoQ+2a7TFEMRSGn60AHeiADlABHdABKkAF6IAKUAElUIEWqIB5Z5KZbGR383Fzb9xJ/uzM3ZvNefIm55zk7IKZtMVMOOggrSm5TpFD4ArQZwvtGbgH3kLGrAK5NhAtAPg23ACyb6mFQKTAK/BtOjwAXxMTbQNnxp4t4MhXJgQi6Q6AS+BuYgB/+AvgFngBTtwvQyA/5oWdBpTwQXaBT/NwyfZ1IK26ZjvRHaSV7dIVaUUJa0dXZJMi8ueKPblBU8HuHFDEjmlVFBHEE/Buom0qjCCURewbkD+pR4CsCogMkRp7GTAuxIdJTmMmogqIJiwHJhdC41UDSYUpgagOEgtTCjEKyCaYISBGA1kFo+fWO6Vs7JA7rrpH/AF9B6Dv5WJLIUZVxEK5MHo2BMRkIHY5yYDcoOmrPfrScveEjMkJmpPukZB3kkG5GcAkiqxzsTkZwCSKxMSJIWCq7pEYiJA3y3EA1UBSIIaAqQKSA1EKUwXEHqxyg527Z4J3umMdrDTOEEddXYXGnA4niewx5++cd6osrRxDSvt0kNIZHLp/V2ToGS39vWRF/n2hR9XT4zmU3mwxVLd+ClKPBfe6pcvITWdOnZpmVDFUnWdRnrazIGWUOmiZtdBUyVWVOekPAy0YnmRDq5XbJAi93EGSp6xyh1/AIMgzsTyKtwAAAABJRU5ErkJggg==") no-repeat;
+}
+
+.hamster-wheel {
+    background:url("https://thumbs.dreamstime.com/z/hamster-wheel-5329240.jpg");
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-color: white;    
+	width: 325px;
+	height: 266px;
+	cursor: pointer;
+	border: none;
+}
+
+.container {
+	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Arial;*/
+	background-color: white;
+	width: 400px;
+	height: 640px;
+	margin: 0 auto; /* display game in the centre of the website/device */
+}
+
+.toppad {
+	display: inline-block;
+	height: 120px;
+	width: 400px;
+}
+
+.midpad {
+	/*Picture*/
+	/*width: 325px;*/
+	/*height: 266px;*/
+	height: 270px;
+	width: 400px;
+ 	text-align: center;
+}
+
+.grid {
+	/* two grids at the bottom of the game board */
+	display: inline-block;
+	height: 250;
+	width: 400px;
+}
+
+.pad_in2 {
+	/* arranging buttons at the bottom of the game board */
+	display: inline-block;
+	text-align: right;
+	height: 100px;
+	width: 198px;
+	/*background-color: grey;*/
+}
+
+.container.menubar{
+	height:100%;
+	width:100%;	
+}
+.menubar{
+	height: 53px;	
+	background-color: lightgrey;
+	border-bottom: 1px solid black;	
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+.pad_in3{
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	/*height: 100%;	*/
+}
+.menubar > .pad_in3:first-child{
+	width:14%;
+	float: left;
+    /*background-color: lightyellow;*/
+}
+.menubar > .pad_in3:nth-child(2){
+	width:72%;
+}
+.menubar > .pad_in3:nth-child(3){
+	width:14%;
+	float: right;
+    /*background-color: lightblue;*/
+}
+
+.gamecard{
+	background-size: contain;
+	padding: 0px 5px;
+	border: 1px solid black;
+	margin: 30px 10px;
+}

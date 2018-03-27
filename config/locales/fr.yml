@@ -1,0 +1,60 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  events:
+    show:
+      youexpense: Vous dépensez
+      youearn: Vous gagnez
+  game:
+    start:
+      apptitle: Ca$hoo
+      available: Argent disponible
+      bankAcc: Banques
+      stocks: Actions
+      revenue: Revenus
+      expense: Dépenses
+      assets: Actif
+      liabilities: Passif
+      revenueM: Revenus mensuels
+      wealth: Patrimoine
+    menu:
+      optionmenu: Menu des options
+      FRlanguage: Français
+      ENlanguage: Anglais
+  home:
+    index:
+      welcome: Bienvenue dans l'appli Ca$hoo !
+      subwelcome: Salut petit hamster ? Sors de ta roue ! Seras-tu capable d'atteindre l'indépendance financière ?
+      startButton: Je veux essayer !
+  layouts:
+    application:
+      title: Digit Indep

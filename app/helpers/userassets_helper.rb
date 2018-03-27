@@ -1,0 +1,2 @@
+module UserassetsHelper
+end
